@@ -1,5 +1,6 @@
 //const models = require('../models/playerkillfeed');
-const PlayerKillFeed = require('../models/playerkillfeed');
+
+const {PlayerKillFeed} = require('../models');
 
 function save(req, res){
     const postData = {
@@ -7,7 +8,7 @@ function save(req, res){
         killer_steamId: '1234566',
         killer_name: 'ABABA'
     }
-
+    
     PlayerKillFeed.create(postData).then(result => {
         res.status(201).json({
             message: "Kill added successfully",

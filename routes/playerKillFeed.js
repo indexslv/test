@@ -5,7 +5,7 @@ const res = require('express/lib/response');
 
 
 router.post('/killfeed',  function(req, res){
-    playerKillFeedController.save();
+    playerKillFeedController.save(req, res);
 });
 
 //router.post('/killfeed', playerKillFeedController.save);
